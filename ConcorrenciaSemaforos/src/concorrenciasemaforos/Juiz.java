@@ -10,4 +10,10 @@ package concorrenciasemaforos;
  */
 public class Juiz extends Thread {
     
+    @Override
+    public void run() {
+        
+        
+    }
+    
 }
