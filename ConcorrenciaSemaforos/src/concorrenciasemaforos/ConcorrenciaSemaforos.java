@@ -19,12 +19,12 @@ public class ConcorrenciaSemaforos {
         
         Mesas mesas = new Mesas();   
         Semaphore salaDeJogo = new Semaphore(6, true);
-        Juiz juiz = new Juiz();
+        Juiz juiz = new Juiz(mesas);
         juiz.start();
         
         for(int i=0;i<90;i++){
-            Jogador jogadorVerde = new Jogador("Jogador Verde "+i,salaDeJogo);
-            Jogador jogadorAzul = new Jogador("Jogador Azul "+i,salaDeJogo);
+            Jogador jogadorVerde = new Jogador(0, "Jogador Verde "+i, salaDeJogo, mesas);
+            Jogador jogadorAzul = new Jogador(1, "Jogador Azul "+i, salaDeJogo, mesas);
             jogadorVerde.start();
             jogadorAzul.start();
         }      

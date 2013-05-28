@@ -23,4 +23,7 @@ public class Mesas {
         };
     }
     
+    public AtomicIntegerArray getMesa(int num){
+        return mesas[num];
+    }
 }

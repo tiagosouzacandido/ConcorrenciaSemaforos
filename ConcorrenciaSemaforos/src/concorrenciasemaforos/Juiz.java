@@ -10,10 +10,17 @@ package concorrenciasemaforos;
  */
 public class Juiz extends Thread {
     
+    private Mesas mesas;
+    
+    public Juiz(Mesas mesas){
+        this.mesas = mesas;
+    }
+    
     @Override
     public void run() {
-        
-        
+        for (int i=0;i<3;i++){       
+            
+        }
     }
     
 }
